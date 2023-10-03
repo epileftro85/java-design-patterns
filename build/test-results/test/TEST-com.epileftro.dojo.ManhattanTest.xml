@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.epileftro.dojo.ManhattanTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-10-02T20:53:59" hostname="CO000K54M4WF0XQ" time="0.028">
+  <properties/>
+  <testcase name="[1] 7, 2, 3, 5, 7" classname="com.epileftro.dojo.ManhattanTest" time="0.021"/>
+  <testcase name="[2] 7, -2, -3, -5, -7" classname="com.epileftro.dojo.ManhattanTest" time="0.001"/>
+  <testcase name="[3] 17, -2, 3, 5, -7" classname="com.epileftro.dojo.ManhattanTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
