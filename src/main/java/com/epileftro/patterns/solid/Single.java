@@ -1,5 +1,9 @@
 package com.epileftro.patterns.solid;
 
+// Robert Martin summarizes this principle well by mandating that, “a class should have one, and only one, reason to change.”
+// Following this principle means that each class only does one thing and every class or module only has responsibility
+// for one part of the software’s functionality. More simply, each class should solve only one problem.
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -29,7 +33,7 @@ public class Single {
      * which are not part of the responsibility of the class, example, load a file
      * or load an url.
      */
-    /* public void saveToFile(Journal journal, String filename, boolean overwrite) throws FileNotFoundException {
+    /* public void saveToFile(String filename, boolean overwrite) throws FileNotFoundException {
         if (overwrite || new File(filename).exists()) {
             try (PrintStream out = new PrintStream(filename)){
                 out.println(toString());
@@ -53,15 +57,15 @@ class Persistence {
 class Demo {
     public static void main(String[] args) throws IOException {
         Single j = new Single();
-        j.addEntry("I cried today");
-        j.addEntry("I ate a bug");
+        j.addEntry("First Entry");
+        j.addEntry("Second Entry");
 
         System.out.println(j);
 
         Persistence p = new Persistence();
-        String filename = "/tmp/journal.txt";
+        String filename = "/tmp/entries.txt";
         p.saveToFile(j, filename, true);
 
-        Runtime.getRuntime().exec("/Applications/Pages.app " + filename);
+        // Runtime.getRuntime().exec("/Applications/Pages.app " + filename);
     }
 }

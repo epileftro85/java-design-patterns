@@ -67,9 +67,9 @@ class HtmlBuilder {
 
 class HtmlNewPrinter {
     public static void main(String[] args) {
-        HtmlBuilder builder = new HtmlBuilder("ol");
-        builder.addChild("li", "Java");
-        builder.addChild("li", "Builder");
+        HtmlBuilder builder = new HtmlBuilder("div");
+        builder.addChild("b", "Java");
+        builder.addChild("b", "Builder");
         System.out.println(builder);
     }
 }

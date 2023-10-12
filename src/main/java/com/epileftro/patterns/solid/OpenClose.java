@@ -1,11 +1,17 @@
 package com.epileftro.patterns.solid;
 
+// “You should be able to extend a class’s behavior without modifying it.”
+
+// Following this principle is essential for writing code that is easy to maintain and revise. Your class complies with this principle if it is:
+// 1) Open for extension, meaning that the class’s behavior can be extended; and
+// 2) Closed for modification, meaning that the source code is set and cannot be changed.
+
 import java.util.List;
 import java.util.stream.Stream;
 
 enum Color { RED, GREEN, BLUE }
 
-enum Size { SMALL, MEDIUM, LARGE, HUGE }
+enum Size { SMALL, MEDIUM, LARGE }
 
 class Product {
     public String name;
@@ -19,6 +25,7 @@ class Product {
     }
 }
 
+// Old way
 class ProductsFilter {
     /* The next code has some problem, this is duplicated by the properties of the products
      * If for example tomorrow the products has to be filtered by price, we need to create another 2 methods
@@ -38,6 +45,7 @@ class ProductsFilter {
     }
 }
 
+// New way
 interface Specification<T> {
     boolean isSatisfied(T item);
 }
@@ -97,7 +105,7 @@ public class OpenClose {
     public static void main(String[] args) {
         Product apple = new Product("Apple", Color.GREEN, Size.SMALL);
         Product tree = new Product("Tree", Color.GREEN, Size.LARGE);
-        Product house = new Product("House", Color.BLUE, Size.LARGE);
+        Product house = new Product("Sky", Color.BLUE, Size.LARGE);
 
         List<Product> products = List.of(apple, tree, house);
 

@@ -1,7 +1,10 @@
 package com.epileftro.patterns.solid;
 
+// Martin explains this principle by advising, “Make fine-grained interfaces that are client-specific. Clients should not be forced to implement interfaces they do not use.”
+
 class Document {}
 
+// Machine has several functionalities, which will be un used in some inherited classes;
 interface Machine {
     void print(Document d);
     void fax(Document d);

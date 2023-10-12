@@ -40,7 +40,7 @@ interface RelationBrowser {
 } */
 
 // Here we implement a better implementation of the logic with an abstracted interface
-class Relationships implements RelationBrowser{
+class Relationships implements RelationBrowser {
     private final List<Triplet<Person, Relationship, Person>> relations = new ArrayList<>();
 
     public void addParentAndChild(Person parent, Person child) {

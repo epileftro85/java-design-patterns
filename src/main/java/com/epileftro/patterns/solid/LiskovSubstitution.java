@@ -1,5 +1,7 @@
 package com.epileftro.patterns.solid;
 
+// this principle simply requires that every derived class should be substitutable for its parent class
+
 class Rectangle {
     public int width, height;
 
@@ -62,7 +64,7 @@ class Square extends Rectangle {
 
 public class LiskovSubstitution {
     // This function violates the Liskov substitution because it only works for
-    // Rectangle, if one send a Square it doesn't works.
+    // Rectangle, if one send a Square which extends from rectangle it doesn't work.
     // Now in order to make it work we should validate if we want to build a square or a rectangle
     // if we are building a square we do not setHeight(10)
     static void useIt(Rectangle r) {
